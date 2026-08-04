@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@source "./**/*.{ts,tsx,js,jsx,html}";
+@variant dark (&:where(.dark, .dark *));
+body { margin: 0; }
+.hf-root { padding: 1rem; font-family: ui-sans-serif, system-ui, sans-serif; color: #111827; background: white; }
+.hf-root h1 { margin: 0 0 .75rem; font-size: 1.1rem; }
+.hf-root form, .hf-header { display: flex; gap: .5rem; align-items: center; }
+.hf-root input { flex: 1; border: 1px solid #d1d5db; border-radius: .5rem; padding: .5rem .75rem; }
+.hf-root button { border: 0; border-radius: .5rem; padding: .5rem .75rem; background: #fbbf24; color: #111827; cursor: pointer; font-weight: 600; }
+.hf-root button:disabled { opacity: .6; cursor: default; }
+.hf-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: .75rem; margin-top: 1rem; }
+.hf-card { display: flex; min-height: 130px; flex-direction: column; align-items: stretch; gap: .35rem; border: 1px solid #e5e7eb !important; background: #fff !important; text-align: left; }
+.hf-card:hover { border-color: #fbbf24 !important; }
+.hf-card span, .hf-card small, .hf-card p { color: #6b7280; font-weight: 400; margin: 0; }
+.hf-card p { font-size: .78rem; flex: 1; }
+.hf-empty { color: #6b7280; text-align: center; padding: 2rem; }
+.hf-header { justify-content: space-between; margin-bottom: .75rem; }
+.hf-frame { width: 100%; min-height: 600px; border: 0; border-radius: .5rem; background: #f3f4f6; }
+@media (prefers-color-scheme: dark) { .hf-root { background: #030712; color: #f9fafb; } .hf-root input { background: #111827; border-color: #374151; color: #f9fafb; } .hf-card { background: #111827 !important; border-color: #374151 !important; } }
