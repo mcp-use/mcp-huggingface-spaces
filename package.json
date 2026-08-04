@@ -1,19 +1,21 @@
 {
   "name": "huggingface-spaces",
   "type": "module",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Search and embed Hugging Face Spaces in your chat",
   "license": "MIT",
+  "engines": { "node": ">=22.22.2" },
   "main": "dist/index.js",
   "scripts": {
     "build": "mcp-use build",
+    "typecheck": "mcp-use typecheck",
     "dev": "mcp-use dev",
     "start": "mcp-use start",
     "deploy": "mcp-use deploy",
-    "postinstall": "mcp-use generate-types || true"
+    "postinstall": "mcp-use typecheck || true"
   },
   "dependencies": {
-    "mcp-use": "^1.32.0",
+    "mcp-use": "^2.0.4",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "tailwindcss": "^4.2.0",
